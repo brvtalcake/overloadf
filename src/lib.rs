@@ -1,4 +1,5 @@
 #![feature(fn_traits, unboxed_closures, const_extern_fn)]
+#![no_std]
 
 //! # Overloadf
 //!
