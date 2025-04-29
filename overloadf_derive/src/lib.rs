@@ -746,7 +746,7 @@ fn process_impl(mut item: syn::ItemImpl) -> TokenStream {
                         let shared_type = format_ident!("Overloader_{}_{}", tp_str, method_id);
                         let const_stream: TokenStream = quote!(
                             #[allow(non_upper_case_globals)]
-                            const #const_field: #shared_type = #shared_type;
+                            #vis const #const_field: #shared_type = #shared_type;
                         )
                         .into();
                         let t = syn::parse_macro_input!(const_stream as syn::ImplItemConst);
